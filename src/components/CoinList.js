@@ -1,15 +1,52 @@
 import React, {Component } from 'react';
-import { View, Text } from 'react-native';
+import { Card, CardSection } from './common';
+import { View, Text, TouchableHighlight } from 'react-native';
+import { Actions } from 'react-native-router-flux';
+
+
 
 class CoinList extends Component {
     render() {
         return (
-            <View>
-                <Text>Coin1</Text>
-                <Text>Coin2</Text>
-                <Text>Coin3</Text>
-                <Text>Coin4</Text>
-            </View>
+            <Card>
+                <TouchableHighlight onPress={() => Actions.btc()}>
+                <CardSection>
+                    <View >
+                        <Text>
+                            BTC
+                        </Text>
+                    </View>
+                </CardSection>
+                </TouchableHighlight>
+
+                <TouchableHighlight onPress={() => Actions.eth()}>
+                <CardSection>
+                    <View >
+                        <Text>
+                            ETH
+                        </Text>
+                    </View>
+                </CardSection>
+                </TouchableHighlight>
+                <TouchableHighlight onPress={() => Actions.xrp()}>
+                <CardSection>
+                    <View >
+                        <Text>
+                            XRP
+                        </Text>
+                    </View>
+                </CardSection>
+                </TouchableHighlight>
+                <TouchableHighlight onPress={() => Actions.ltc()}>
+                <CardSection>
+                    <View >
+                        <Text>
+                            LTC
+                        </Text>
+                    </View>
+                </CardSection>
+                </TouchableHighlight>
+            </Card>
         )
     }
 }
