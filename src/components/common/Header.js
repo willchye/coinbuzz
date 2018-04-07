@@ -1,6 +1,6 @@
 //IMPORT LIBRARIES FOR MAKING A COMPONENT
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, Image } from 'react-native';
 
 //MAKE A COMPONENT
 const Header = (props) => {
@@ -8,7 +8,16 @@ const Header = (props) => {
 
     return (
         <View style={viewStyle}>
-            <Text style={textStyle}>{props.headerText}</Text>
+            <Text style={textStyle}
+      ><Image
+        style={{ alignSelf: 'center',
+        height: 150,
+        width: 250,
+        borderWidth: 1,
+        borderRadius: 75}}
+         source={require('../../assets/blandy.png')}
+         resizeMode="contain"
+        /></Text>
         </View>
     )
 };
@@ -32,4 +41,4 @@ const styles = {
 }
 
 //MAKE THE COMPONENT AVAILABLE TO OTHER PARTS OF THE APP
-export { Header };
+export default Header;
