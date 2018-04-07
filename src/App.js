@@ -34,7 +34,7 @@ class App extends Component {
 
         // Will added
     renderCrypto() {
-        console.log(this.state.cryptos);
+        console.log('cryptos',this.state.cryptos);
 
         return this.state.cryptos.map(crypto=>
         <CryptoCard key={crypto.ID} crypto={crypto}/>

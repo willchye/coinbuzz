@@ -24,13 +24,13 @@ class CryptoCard extends Component {
     console.log('price', this.state.price.USD);
 
     if(this.props.crypto.SYMBOL === 'ETH'){
-        var imgSource = require('../../assets/topCoins/eth.png');
+        var imgSource = require('../../assets/coins/eth.png');
     }
     if(this.props.crypto.SYMBOL === 'TRX'){
-        imgSource = require('../../assets/topCoins/trx.png');
+        imgSource = require('../../assets/coins/trx.png');
     }
     if(this.props.crypto.SYMBOL === 'BCH'){
-        imgSource = require('../../assets/topCoins/bch.png');
+        imgSource = require('../../assets/coins/bch.png');
     }
     if(this.props.crypto.SYMBOL === 'VEN'){
         imgSource = require('../../assets/topCoins/ven.png');
